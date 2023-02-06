@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, StatusBar} from "react-native";
+import {StyleSheet, Text, View, StatusBar, TouchableOpacity} from "react-native";
 import React from "react";
 import {AntDesign} from "@expo/vector-icons";
 const statusbarHeight = StatusBar.currentHeight ? StatusBar.currentHeight : 22;
@@ -11,9 +11,15 @@ function Header() {
             </View>
 
             <View style={styles.iconRow}>
-                <AntDesign name="pluscircleo" size={24} color="black" />
-                <AntDesign name="hearto" size={24} color="black" />
-                <AntDesign name="message1" size={24} color="black" />
+                <TouchableOpacity>
+                    <AntDesign name="pluscircleo" size={24} color="black" />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <AntDesign name="hearto" size={24} color="black" />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <AntDesign name="message1" size={24} color="black" />
+                </TouchableOpacity>
             </View>
         </View>
     );

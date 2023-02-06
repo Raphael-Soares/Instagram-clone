@@ -4,24 +4,24 @@ import Story from "./Story";
 
 function Stories({stories}) {
     return (
-        <ScrollView
-            style={styles.container}
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-        >
+        <View style={styles.container}>
             <FlatList
                 data={stories}
                 keyExtractor={(item) => item.id}
                 renderItem={({item}) => <Story story={item} />}
                 horizontal={true}
+                showsHorizontalScrollIndicator={false}
             />
-        </ScrollView>
+        </View>
     );
 }
 
 export default Stories;
 const styles = StyleSheet.create({
     container: {
-        height: 100,
+        paddingBottom: 16,
+        border: 1,
+        borderColor: "#e9e9e9",
+        borderBottomWidth: 1,
     },
 });
