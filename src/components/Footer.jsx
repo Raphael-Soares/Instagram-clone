@@ -3,7 +3,7 @@ import React from "react";
 
 import {AntDesign, MaterialCommunityIcons, Entypo} from "@expo/vector-icons";
 
-function Footer() {
+function Footer({navigation}) {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.icon}>
@@ -22,7 +22,12 @@ function Footer() {
                 <MaterialCommunityIcons name="shopping-outline" size={24} color="black" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.icon}>
+            <TouchableOpacity
+                style={styles.icon}
+                onPress={() => {
+                    navigation.navigate("Profile");
+                }}
+            >
                 <AntDesign name="user" size={24} color="black" />
             </TouchableOpacity>
         </View>

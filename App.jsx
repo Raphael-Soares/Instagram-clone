@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 import Home from "./src/pages/Home";
 import Notifications from "./src/pages/Notifications";
+import Profile from "./src/pages/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ function App() {
             >
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Notifications" component={Notifications} />
+                <Stack.Screen name="Profile" component={Profile} />
             </Stack.Navigator>
         </NavigationContainer>
     );

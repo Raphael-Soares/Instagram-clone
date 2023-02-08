@@ -84,7 +84,7 @@ function Home({navigation}) {
                 ListHeaderComponent={<Stories stories={stories} />}
                 listeHeaderComponentStyle={{marginBottom: 0}}
             ></FlatList>
-            <Footer />
+            <Footer navigation={navigation} />
         </View>
     );
 }
