@@ -23,9 +23,7 @@ function ProfileBio() {
                     <Text style={{color: "black", fontWeight: "bold"}}>Message</Text>
                 </Pressable>
                 <Pressable style={styles.buttonAdd}>
-                    <Text style={styles.buttonText}>
-                        <AntDesign name="adduser" size={20} color="white" />
-                    </Text>
+                    <AntDesign name="adduser" size={20} color="black" />
                 </Pressable>
             </View>
         </View>
@@ -74,7 +72,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     buttonAdd: {
-        backgroundColor: "#0095f6",
+        backgroundColor: "#eeeee",
         height: 30,
         paddingHorizontal: 6,
 

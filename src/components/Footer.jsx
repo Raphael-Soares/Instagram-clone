@@ -6,7 +6,12 @@ import {AntDesign, MaterialCommunityIcons, Entypo} from "@expo/vector-icons";
 function Footer({navigation}) {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.icon}>
+            <TouchableOpacity
+                style={styles.icon}
+                onPress={() => {
+                    navigation.navigate("Home");
+                }}
+            >
                 <AntDesign name="home" size={24} color="black" />
             </TouchableOpacity>
 

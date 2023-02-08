@@ -5,17 +5,18 @@ import ProfileHeader from "../components/Profile/ProfileHeader";
 import ProfileBio from "../components/Profile/ProfileBio";
 import Footer from "../components/Footer";
 import ProfileTabs from "../components/Profile/ProfileTabs";
+import PostsGrid from "../components/Profile/PostsGrid";
 
-function Profile() {
+function Profile({navigation}) {
     return (
         <View style={styles.container}>
             <Header />
             <ProfileHeader />
             <ProfileBio />
             <ProfileTabs />
-            <ScrollView></ScrollView>
+            <PostsGrid />
 
-            <Footer />
+            <Footer navigation={navigation} />
         </View>
     );
 }
