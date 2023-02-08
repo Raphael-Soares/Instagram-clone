@@ -13,8 +13,8 @@ function Comment({item}) {
                 />
 
                 <Text style={styles.text}>
-                    <Text style={styles.username}>{item.username}</Text>
-                    <Text style={styles.content}>commented: {item.text}</Text>
+                    <Text style={styles.username}>{item.username} </Text>
+                    <Text style={styles.content}>commented: {item.text} </Text>
 
                     <Text style={styles.time}>{item.time}</Text>
                 </Text>
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     },
     text: {
         flexDirection: "row",
+        alignItems: "center",
 
         flex: 1,
     },
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     content: {
-        marginHorizontal: 3,
+        paddingHorizontal: 3,
     },
     time: {
         color: "grey",
