@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import Stories from "../components/Stories";
 import Post from "../components/Post";
+import Footer from "../components/Footer";
 
 const stories = [
     {
@@ -77,6 +78,7 @@ function Home({navigation}) {
                 ListHeaderComponent={<Stories stories={stories} />}
                 listeHeaderComponentStyle={{marginBottom: 0}}
             ></FlatList>
+            <Footer />
         </View>
     );
 }
