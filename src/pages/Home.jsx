@@ -1,10 +1,16 @@
 import {StyleSheet, Text, View, ScrollView, FlatList} from "react-native";
-import React from "react";
+import {useEffect, useState} from "react";
+
+import axios from "axios";
 
 import Header from "../components/Header";
 import Stories from "../components/Stories";
 import Post from "../components/Post";
 import Footer from "../components/Footer";
+
+function generateNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 const stories = [
     {
@@ -42,7 +48,7 @@ const stories = [
 const posts = [
     {
         id: "1",
-        image: "https://picsum.photos/200/300",
+        image: `https://picsum.photos/id/${generateNumber(0, 300)}/1000`,
         name: "John Doe",
         likes: 100,
         caption: "This is a caption",
@@ -50,7 +56,7 @@ const posts = [
     },
     {
         id: "2",
-        image: "https://picsum.photos/201/300",
+        image: `https://picsum.photos/id/${generateNumber(0, 300)}/1000`,
         name: "Mary Key",
         likes: 200,
         caption: "This is a caption",
@@ -58,7 +64,7 @@ const posts = [
     },
     {
         id: "3",
-        image: "https://picsum.photos/202/300",
+        image: `https://picsum.photos/id/${generateNumber(0, 300)}/1000`,
         name: "Maria Eduarda",
         likes: 300,
         caption: "This is a caption",

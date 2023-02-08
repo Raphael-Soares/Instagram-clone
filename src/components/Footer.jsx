@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, TouchableOpacity} from "react-native";
 import React from "react";
 
-import {AntDesign} from "@expo/vector-icons";
+import {AntDesign, MaterialCommunityIcons, Entypo} from "@expo/vector-icons";
 
 function Footer() {
     return (
@@ -15,11 +15,11 @@ function Footer() {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.icon}>
-                <AntDesign name="pluscircleo" size={24} color="black" />
+                <Entypo name="video" size={24} color="black" />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.icon}>
-                <AntDesign name="hearto" size={24} color="black" />
+                <MaterialCommunityIcons name="shopping-outline" size={24} color="black" />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.icon}>

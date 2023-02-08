@@ -12,7 +12,13 @@ const Stack = createNativeStackNavigator();
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+            <Stack.Navigator
+                initialRouteName="Home"
+                screenOptions={{
+                    headerShown: false,
+                    animation: "fade",
+                }}
+            >
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Notifications" component={Notifications} />
             </Stack.Navigator>
