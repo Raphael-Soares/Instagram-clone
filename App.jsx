@@ -9,7 +9,7 @@ import Notifications from "./src/pages/Notifications";
 
 const Stack = createNativeStackNavigator();
 
-function App({navigate}) {
+function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
