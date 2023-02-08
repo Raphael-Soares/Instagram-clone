@@ -65,10 +65,10 @@ const posts = [
     },
 ];
 
-function Home() {
+function Home({navigation}) {
     return (
         <View style={styles.container}>
-            <Header />
+            <Header navigation={navigation} />
 
             <FlatList
                 data={posts}

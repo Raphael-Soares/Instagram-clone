@@ -1,9 +1,23 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
-import Home from "./src/pages/Home";
 
-function App() {
-    return <Home />;
+import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+
+import Home from "./src/pages/Home";
+import Notifications from "./src/pages/Notifications";
+
+const Stack = createNativeStackNavigator();
+
+function App({navigate}) {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen name="Notifications" component={Notifications} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
 export default App;

@@ -3,7 +3,7 @@ import React from "react";
 import {AntDesign} from "@expo/vector-icons";
 const statusbarHeight = StatusBar.currentHeight ? StatusBar.currentHeight : 22;
 
-function Header() {
+function Header({navigation}) {
     return (
         <View style={styles.container}>
             <View>
@@ -14,7 +14,7 @@ function Header() {
                 <TouchableOpacity>
                     <AntDesign name="pluscircleo" size={24} color="black" />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Notifications")}>
                     <AntDesign name="hearto" size={24} color="black" />
                 </TouchableOpacity>
                 <TouchableOpacity>
