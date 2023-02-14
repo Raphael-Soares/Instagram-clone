@@ -14,6 +14,7 @@ function Profile({navigation}) {
             <ProfileHeader />
             <ProfileBio />
             <ProfileTabs />
+
             <PostsGrid />
 
             <Footer navigation={navigation} />
